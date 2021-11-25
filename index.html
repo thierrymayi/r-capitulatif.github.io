@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>RESUME DU PROJET DE FIN D'ETUDE</title>
+        <h1>RESUME DU PROJET DE FIN D'ETUDE</h1>
+        <style>
+        H1 {background-color: chartreuse;}
+        h1 {text-align: center;}
+        </style>
+    </head>
+    <body>
+        <h2> INTRODUCTION</h2>
+        <P>La croissance rapide des villes et les concentrations démographiques inhérentes ont des conséquences néfastes : la perturbation de l’équilibre écologique, les difficultés à traiter les déchets, l’explosion des niveaux de pollution, la dégradation de la qualité de la vie, et, aussi, l’augmentation des violences urbaines. Les études du changement urbain grâce à la télédétection, aux Systèmes d’Information Géographique (SIG), permettent de fournir aux décideurs des informations spatiales et quantitatives sur l’évolution des aires urbaines. Ainsi, l’obtention, le traitement et la présentation de ces informations constituent un champ d’étude et de recherche pertinent et important pour comprendre l’évolution urbaine. Le Cameroun est parmi les pays en développement qui connaissent actuellement une urbanisation très intense. La mise en œuvre des politiques urbaines pour le suivi régulier de ce phénomène d’urbanisation nécessite l’acquisition d’informations fiables et actualisées sur toutes les formes d’évolution. L’exploitation des photographies aériennes, méthode traditionnelle pour l’acquisition de l’information, a toujours été couteuse. C’est ainsi que les techniques numériques comme la télédétection satellitaire ont connu des développements considérables et constituent une alternative intéressante pour le suivi de l’étalement urbain des villes des pays en voie de développement comme la commune d’arrondissement de  Ntui.
+        <h3> 1 - Situation géographique de la zone d'étude </h3>
+        <p>Située dans la région du Centre et à 100 km de Yaoundé, département du Mbam et Kim  entre le 4°27'00" de latitude Nord et au 11°3759et longitude Est, la commune de Ntui s’étale sur une superficie de 1 650 km². La commune compte 27 villages dont trois chefferies de 2ème degré avec une population de 20.000 habitants (RGPH 2005). Elle est limitée au Nord par la commune de Ngoro, au Sud par la commune de Batchenga du département de la Lekie, à l’Ouest par la commune de Sa’ a du département de la Lekie et à l’Est par la commune de Mbandjock
+        </p>
+        <img src="Images/carte de ntui 3.jpg" width="60%">
+        
+        <h3> 2- Relief </h3>
+        <p>De par sa proximité au fleuve Sanaga, le relief de la commune de Ntui est moyennement accidenté et varié (présence de plaines, de collines et de vallées) avec des pentes comprises relativement faible l’altitude moyenne étant de 600 m
+        </p>
+        <img src="Images/relief_ntui.jpg" width="60%">
+        <h2> III.METHODOLOGIE DE LA RECHERCHE</h2>
+<P>La méthodologie utilisée s’est axée sur trois activités qui sont : la collecte des données, le traitement des données et la production des livrables. </P>
+<h3> III.1 Activité 1 : Collecte des données </h3>
+<P>Quatre étapes ont animé cette activité : </P>
+<H4>Etape 1 : Téléchargement des images satellitaires  </H4>
+<P>Les images du programme Landsat sont fournies gratuitement par l’USGS. De plus, grâce aux archives de données satellitaires datant du lancement de Landsat 1 (ERTS-1) en 1972, il est possible d’obtenir une série chronologique qui s’étend jusqu’en 2013, soit plus de quarante années d’acquisition à des résolutions spatiales et spectrales différentes. Grâce à l’application Web Earth Explorer de l’USGS (http://earthexplorer.usgs.gov), les images satellitaires Landsat (2000,2010 et 2020) de la commune de Ntui ont pu être téléchargées.  </P>
+<h4> Enquête de terrain </h4>
+<p>Cette étape a consisté à élaborer un questionnaire avec l’application « KoBoCollect »qui a été administrée aux populations de la zone d’étude. La technique d’échantillonnage appliquée dans ce travail était aléatoire simple. Les populations enquêtées ont été choisies fortuitement dans les différents villages en respectant le principe de la représentativité. Cependant, faire passer ce questionnaire sur le terrain a permis d’obtenir d’autres informations annexes qui ont été utiles pour comprendre le phénomène étudié  </p>
+<h4> L’entretien </h4>
+<p>  Les échanges entre les autochtones de la zone d’étude ont porté sur les facteurs et les conséquences de la croissance urbaine dans la commune de Ntui </p>
+<h4>Revue de la littérature </h4>
+<p> Avant d’aborder l’étude à proprement dit, il nous parait important de définir un certain nombre de concepts ou de termes techniques afin de permettre aux lecteurs de mieux s’approprier de l’étude. Par ailleurs, la recherche et la documentation se rapportant au thème et à la zone d’étude s’est aussi faite. Elle a consisté à consulter les ouvrages dans la bibliothèque de Trow et les moteurs de recherches sur internet. </p>
+<h3>III.2 Activité 2 : Traitement des données  </h3>
+<H4>Etape 1 : Les prétraitements </H4>
+<P>La compilation des bandes s’est faite afin d’obtenir une composition colorée de l’image. Cette image permet l’interprétation facile des éléments observés dans la zone à travers la forme, la couleur, la structure etc. </P>
+<H4>Etape 2 : Traitement proprement dit </H4>
+<P>L’indice de brillance a été calculé pour extraire le bâti avec pour formule :	
+    NDBI=(R1650-R830)/(R1650+R830) , R1650 = bande 5 et R830 = bande 4
+     </P>
+<h4>Etape 2 : Le dépouillement   </h4>
+<p>L’opération aura pour but d’identifier, de vérifier, de trier et de classer les données collectées lors des enquêtes et des entretiens afin de pouvoir effectuer des traitements statistiques dans les meilleures conditions de fiabilités et de validités possibles. Cette opération s’est fait avec le logiciel Excel 2013. </p>
+<h3>III.3 Activité 3 : Production des livrables  </h3>
+<P>Dans le cadre de ce projet, les livrables attendus sont :  </P>
+<P> -La cartographie du milieu urbain en 2000,2010 et 2020 </P>
+<P> -L’identification les facteurs liés à l’évolution de l’urbanisation dans la zone d’étude </P>
+<P> -Les conséquences liées à ce phénomène d’urbanisation  </P>
+<h2> IV RESULTATS </h2>
+<h3>IV.1 Cartographie du milieu urbain en 2000, 2010 et 2020 </h3>
+<p> De l’analyse des images satellitaires de 2000, 2010 et 2020, les cartes du milieu urbain dans la commune de Ntui ont été élaborées.Il ressort qu’en 2000, le milieu urbain représentait 1819,32 ha, 4417,34 ha en 2010 et 5721,23 ha en 2020 de la superficie totale
+</p>
+<img src="Images/occupation du sol 2000_2010_2020.jpg"width="60%">
+<H3>IV.2 Identification des cause de l'étalement urbain</H3>
+<H4>Accroissement de la population </H4>
+<P> Selon les résultats du recensement national de la population, la population de la commune de Ntui s'élevait à 25 616 habitants en 2000, 40336 habitants en 2010 et 100036 habitants en 2020 (Figure 9). Soit un taux d’accroissement annuel de 9,5 %. Cet accroissement de la population est dû à multiples de facteurs qui sont : </P>
+<H5>Déclin de la mortalité  </H5>
+<P>Ici nous pouvons expliquer le déclin de la mortalité à travers trois causes possibles. Premièrement nous avons une amélioration des conditions de vie de nutrition et de logement. Deuxièmement nous avons une amélioration ses conditions sanitaires et de la santé publique en générale. Et enfin Troisièmement, nous avons le progrès de la médecine qui peut être contribué à réduire la mortalité </P>
+<H5>Boom de la natalité </H5>
+<P>Il représente l’augmentation brusque de la natalité dans un pays ou une localité. Dans la commune de Ntui, il se caractérise par : le désir d’avoir beaucoup d’enfant, avoir des enfants des deux sexes, la prostitution etc.   </P>
+<H4>Migrations </H4>
+<P> Elles désignent le déplacement d’une personne d’un lieu à un autre, en particulier d’un pays (émigration) dans un autre (immigration) pour ses raisons politiques, sociales, économiques ou personnelles, et qui est le fait soit d’une population entière, soit d’individu s’intégrant dans un phénomène de société plus large. Dans la commune d’arrondissement de Ntui, la progression de l’urbanisation est aussi due aux mouvements migratoires. Ici, certains individus quittent leurs anciennes villes pour se retrouver dans l’arrondissement de Ntui pour divers motifs </P>
+<img src="Images/flux memoire6.jpeg"width="60%">
+<h3>Identification des conséquences</h3>
+<h4> Pollution </h4>
+<p> La pollution devient de plus en plus visible dans notre société. Nous pouvons la définir comme tout ce qui altère notre environnement ou notre santé, habituellement sous forme de substances mais aussi sous forme d’ondes. Elle s’attaque à l’air à l’eau et au sol (composant de notre univers). Le plus souvent elle est due à une activité humaine. Face à l’accroissement de l’urbanisation, les ressources de la commune de Ntui sont très insuffisantes pour maintenir la qualité de vie des populations et ceci entraine : </p>
+<h5> Pollution des eaux vives et de la nappe phréatique   </h5>
+<p> Cette pollution des eaux peut prendre différentes formes en fonction de leurs origines. Elle peut être bactériologique thermique, d’origine chimique… Elle est due à l’utilisation des produits polluant tels que les engrais l’essence. Elle se caractérise aussi par la mise en évidence des déchets ménagers dans les cours d’eau.</p>
+<h5>Pollution des sols </h5>
+<p>Elle se caractérise d’une part par une abondance des déchets ménagers aux alentours des centres urbains et d’autre part, suite à l’augmentation de la population dans la commune et à la demande croissante des produits agricoles, les populations de la commune développent de plus en plus une agriculture intensive grâce aux produits chimiques et ceci change catégoriquement la nature des sols cultivés </p>
+<h5>Pollution de l’air  </h5>
+<p>L’activité humaine est de plus en plus à l’origine de cette dégradation de l’air. Plus l’urbanisation augmente, plus la commune fait face à une augmentation des moyens de transport et ceci se manifeste par des émissions incontrôlées d’oxyde de carbone et de dioxyde d’azote. </p>
+<h4>Dynamique paysagère </h4>
+<p>La manifestation la plus palpable de la croissance urbaine est la consommation de l’espace urbain au détriment du milieu végétal environnant et ceci entraine une dynamique paysagère. A l’échelle du globe, ce processus est négligeable, mais il peut poser dans la commune de graves problèmes en cas de pénurie de terres, lorsque les terres conquises par le milieu urbain sont des terres agricoles fertiles.  </p>
+<img src="Images/1occupation du sol 2000_2010_2020.jpg"width="60%">
+<h4>Développement du secteur économique</h4>
+<p>Entre 2000 à 2020, l’urbanisation est galopante dans la commune de Ntui. La superficie de la ville est passée de 1819,32 hectares en 2000 à 5721,23 hectares en 2020. Cette croissance urbaine est boostée ces dernières années par : </p>
+<p>l’implémentation des projets d’industrie ;</p>
+<p>l’augmentation des moyens de transports ;</p>
+<p>l’augmentation des infrastructures écolières ; </p>
+<p>l’augmentation des infrastructures sanitaires ;</p>
+<p>l’augmentation des activités du secteur informel.</p>
+<h2>CONCLUSION</h2>
+<P> </P>
+Le projet de fin d’étude ici présenté constitue une première étape sur la réflexion du phénomène de l’accroissement urbain dans l’arrondissement de Ntui. Ainsi, rendu au terme de notre travail nous pouvons constater que les résultats obtenus dans notre projet sont similaires à ceux que nous avons identifiés dans notre TDR. L’objectif général de ce projet était d’analyser l’évolution de l’urbanisation dans l’arrondissement de Ntui entre 2000 et 2020. Pour atteindre les résultats de cet objectif, il a été question de structurer notre travail. Ainsi, nous avons d’abord montré l’état du milieu urbain à partir d’une cartographie, tout en faisant une analyse statistique de l’évolution du milieu urbain. Ensuite, nous avons présenté des causes de l’accroissement urbain dans la commune. Dans ces causes, nous avons identifié l’accroissement de la population et les migrations. Enfin nous avons présenté ses conséquences. Parmi ses conséquences nous avons énuméré la pollution et la dynamique paysagère.
+
+
+
+
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet-svg-shape-markers.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="data/contour_ntui_1.js"></script>
+        <script src="data/villages_ntui_2.js"></script>
+        <script src="data/chef_lieu_3.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[4.337619841350042,11.376767358564981],[4.708422916650042,11.940362327435173]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var measureControl = new L.Control.Measure({
+            position: 'topleft',
+            primaryLengthUnit: 'meters',
+            secondaryLengthUnit: 'kilometers',
+            primaryAreaUnit: 'sqmeters',
+            secondaryAreaUnit: 'hectares'
+        });
+        measureControl.addTo(map);
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .innerHTML = '';
+        document.getElementsByClassName('leaflet-control-measure-toggle')[0]
+        .className += ' fas fa-ruler';
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_OSMStandard_0');
+        map.getPane('pane_OSMStandard_0').style.zIndex = 400;
+        var layer_OSMStandard_0 = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OSMStandard_0',
+            opacity: 1.0,
+            attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_OSMStandard_0;
+        map.addLayer(layer_OSMStandard_0);
+        function pop_contour_ntui_1(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['objectid'] !== null ? autolinker.link(feature.properties['objectid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['type_'] !== null ? autolinker.link(feature.properties['type_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['desc_type'] !== null ? autolinker.link(feature.properties['desc_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom_arr'] !== null ? autolinker.link(feature.properties['nom_arr'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom_dep'] !== null ? autolinker.link(feature.properties['nom_dep'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom_reg'] !== null ? autolinker.link(feature.properties['nom_reg'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['code_arr'] !== null ? autolinker.link(feature.properties['code_arr'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['population'] !== null ? autolinker.link(feature.properties['population'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sup_adm_ha'] !== null ? autolinker.link(feature.properties['sup_adm_ha'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['sup_sig_ha'] !== null ? autolinker.link(feature.properties['sup_sig_ha'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['last_edite'] !== null ? autolinker.link(feature.properties['last_edite'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['last_edi_1'] !== null ? autolinker.link(feature.properties['last_edi_1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['created_us'] !== null ? autolinker.link(feature.properties['created_us'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['created_da'] !== null ? autolinker.link(feature.properties['created_da'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['globalid'] !== null ? autolinker.link(feature.properties['globalid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['shape_Leng'] !== null ? autolinker.link(feature.properties['shape_Leng'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['shape_Area'] !== null ? autolinker.link(feature.properties['shape_Area'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_contour_ntui_1_0() {
+            return {
+                pane: 'pane_contour_ntui_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,255,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_contour_ntui_1');
+        map.getPane('pane_contour_ntui_1').style.zIndex = 401;
+        map.getPane('pane_contour_ntui_1').style['mix-blend-mode'] = 'normal';
+        var layer_contour_ntui_1 = new L.geoJson(json_contour_ntui_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_contour_ntui_1',
+            layerName: 'layer_contour_ntui_1',
+            pane: 'pane_contour_ntui_1',
+            onEachFeature: pop_contour_ntui_1,
+            style: style_contour_ntui_1_0,
+        });
+        bounds_group.addLayer(layer_contour_ntui_1);
+        map.addLayer(layer_contour_ntui_1);
+        function pop_villages_ntui_2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(feature.properties['OBJECTID'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['type_'] !== null ? autolinker.link(feature.properties['type_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['desc_type'] !== null ? autolinker.link(feature.properties['desc_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom_lieu'] !== null ? autolinker.link(feature.properties['nom_lieu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['population'] !== null ? autolinker.link(feature.properties['population'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['last_edite'] !== null ? autolinker.link(feature.properties['last_edite'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['last_edi_1'] !== null ? autolinker.link(feature.properties['last_edi_1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['created_us'] !== null ? autolinker.link(feature.properties['created_us'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['created_da'] !== null ? autolinker.link(feature.properties['created_da'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['region'] !== null ? autolinker.link(feature.properties['region'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['departemen'] !== null ? autolinker.link(feature.properties['departemen'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['arrondisse'] !== null ? autolinker.link(feature.properties['arrondisse'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_villages_ntui_2_0() {
+            return {
+                pane: 'pane_villages_ntui_2',
+                radius: 4.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,0,0,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_villages_ntui_2');
+        map.getPane('pane_villages_ntui_2').style.zIndex = 402;
+        map.getPane('pane_villages_ntui_2').style['mix-blend-mode'] = 'normal';
+        var layer_villages_ntui_2 = new L.geoJson(json_villages_ntui_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_villages_ntui_2',
+            layerName: 'layer_villages_ntui_2',
+            pane: 'pane_villages_ntui_2',
+            onEachFeature: pop_villages_ntui_2,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_villages_ntui_2_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_villages_ntui_2);
+        map.addLayer(layer_villages_ntui_2);
+        function pop_chef_lieu_3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['type_'] !== null ? autolinker.link(feature.properties['type_'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['desc_type'] !== null ? autolinker.link(feature.properties['desc_type'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nom_lieu'] !== null ? autolinker.link(feature.properties['nom_lieu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['population'] !== null ? autolinker.link(feature.properties['population'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['last_edite'] !== null ? autolinker.link(feature.properties['last_edite'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['last_edi_1'] !== null ? autolinker.link(feature.properties['last_edi_1'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['created_us'] !== null ? autolinker.link(feature.properties['created_us'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['created_da'] !== null ? autolinker.link(feature.properties['created_da'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['objectid'] !== null ? autolinker.link(feature.properties['objectid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['globalid'] !== null ? autolinker.link(feature.properties['globalid'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['region'] !== null ? autolinker.link(feature.properties['region'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['departemen'] !== null ? autolinker.link(feature.properties['departemen'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['arrondisse'] !== null ? autolinker.link(feature.properties['arrondisse'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_chef_lieu_3_0() {
+            return {
+                pane: 'pane_chef_lieu_3',
+                shape: 'diamond',
+                radius: 8.8,
+                opacity: 1,
+                color: 'rgba(128,17,25,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(219,30,42,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_chef_lieu_3');
+        map.getPane('pane_chef_lieu_3').style.zIndex = 403;
+        map.getPane('pane_chef_lieu_3').style['mix-blend-mode'] = 'normal';
+        var layer_chef_lieu_3 = new L.geoJson(json_chef_lieu_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_chef_lieu_3',
+            layerName: 'layer_chef_lieu_3',
+            pane: 'pane_chef_lieu_3',
+            onEachFeature: pop_chef_lieu_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.shapeMarker(latlng, style_chef_lieu_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_chef_lieu_3);
+        map.addLayer(layer_chef_lieu_3);
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: true,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/chef_lieu_3.png" /> chef_lieu': layer_chef_lieu_3,'<img src="legend/villages_ntui_2.png" /> villages_ntui': layer_villages_ntui_2,'<img src="legend/contour_ntui_1.png" /> contour_ntui': layer_contour_ntui_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
+        setBounds();
+</body>
+</html>
